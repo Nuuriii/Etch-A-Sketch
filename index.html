@@ -4,7 +4,46 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <link rel="stylesheet" href="style.css" />
+
+      <title>SketchPad</title>
    </head>
-   <body></body>
+   <body>
+      <div class="flex-container">
+         <div class="title">
+            <h1>SketchPad</h1>
+         </div>
+         <div class="mode">Mode: Coloring</div>
+         <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+               <button class="blackButton" onclick="changeColor('black')">
+                  Black
+               </button>
+               <button class="eraserButton" onclick="changeColor('white')">
+                  Eraser
+               </button>
+               <button class="grayButton" onclick="changeColor('gray')">
+                  Gray
+               </button>
+               <button class="randomButton" onclick="changeColor('random')">
+                  Random
+               </button>
+               <button onclick="resetBoard()">Reset</button>
+            </div>
+            <div>
+               <input
+                  type="text"
+                  placeholder="Size of Board"
+                  value="16"
+                  onchange="changeSize(this.value)"
+               />
+               <button>Set Size</button>
+            </div>
+            <div class="error">Input must be between 2 and 100</div>
+         </div>
+      </div>
+
+      <script src="script.js"></script>
+   </body>
 </html>
